@@ -4,98 +4,115 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="false"
+    android:layout_centerHorizontal="false"
+    android:layout_marginEnd="0dp"
+    android:layout_marginStart="0dp"
     android:baselineAligned="false"
-    android:gravity="top"
+    android:gravity="center_vertical"
+    android:isScrollContainer="false"
+    android:paddingBottom="0dp"
+    android:soundEffectsEnabled="false"
     android:visibility="visible"
     tools:context=".MainActivity">
 
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="232dp"
-        android:layout_weight="0">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_weight="20">
-
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="numberSigned"
-                tools:text="Dato 2" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/numero1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
                 android:inputType="numberSigned"
                 android:text=" "
                 tools:text="Dato 1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="20">
-
-            <Button
-                android:id="@+id/buttonResta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:text="Resta" />
-
-            <Button
-                android:id="@+id/buttomSuma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:text="Suma" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/buttonMulti"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:text="Multiplicación" />
-
-            <Button
-                android:id="@+id/buttonMulti"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="8"
-                android:text="Division" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/editText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="20"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Resultado" />
-        </TableRow>
-    </TableLayout>
+                android:inputType="numberSigned"
+                tools:text="Dato 2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonMulti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Multiplicación" />
+
+                    <Button
+                        android:id="@+id/buttonDivi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Division" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonResta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Resta" />
+
+                    <Button
+                        android:id="@+id/buttomSuma"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Suma" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="0"
+            android:inputType="textPersonName"
+            android:text="Resultado" />
+    </LinearLayout>
 
 </LinearLayout>
