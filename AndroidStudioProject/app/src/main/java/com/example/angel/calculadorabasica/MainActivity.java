@@ -8,10 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
-    int a = 0;
-    int b = 0;
 
 
     TextView resultado;
@@ -20,10 +19,10 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
 
         resultado =(TextView) findViewById(R.id.resultado);
@@ -37,11 +36,48 @@ public class MainActivity extends Activity {
 
 
         buttonMulti.setOnClickListener(new View.OnClickListener() {
+
+            int numeroUno = 0;
+            int numeroDos = 0;
+
+
             @Override
             public void onClick(View v) {
-               a =  Integer.parseInt(numero1.getText().toString());
-               b =  Integer.parseInt(numero2.getText().toString());
-                multiplicacion(a,b);
+
+                String a = numero1.getText().toString();
+                String b = numero2.getText().toString();
+
+
+
+
+                try {
+                    int d = Integer.parseInt(b);
+                }catch(Exception e){
+                    resultado.setText("no paso el parseo new "+b);
+                }
+
+
+
+                try {
+                    int c = Integer.parseInt(a);
+                }catch(Exception e){
+                    resultado.setText("no paso el parseo new "+a);
+                }
+
+                Toast toast1 =
+                        Toast.makeText(getApplicationContext(),
+                                "el valor de a es: "+numero1, Toast.LENGTH_SHORT);
+
+                toast1.show();
+
+                Toast toast2 =
+                        Toast.makeText(getApplicationContext(),
+                                "el valor de b es: "+numero2, Toast.LENGTH_SHORT);
+
+                toast2.show();
+
+                //resultado.setText(""+multiplicacion(numeroUno,numeroDos));
+
 
             }
         });
@@ -53,12 +89,12 @@ public class MainActivity extends Activity {
     }// end onCreate
 
 
-    public void multiplicacion(int datoA,int datoB){
+    public int multiplicacion(int datoA,int datoB){
         int result =0;
         try {
             if ((datoA > 0) && (datoB > 0)) {
-                result = datoB + datoB;
-                resultado.setText(result);
+                result = datoB * datoB;
+                //toast
             }
 
 
@@ -67,7 +103,7 @@ public class MainActivity extends Activity {
             Log.d("APP_CALCULATOR", "Error al realizar suma");
         }
 
-
+    return result;
 
     }
 }
