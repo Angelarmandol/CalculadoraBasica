@@ -10,12 +10,22 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends Activity {
 
 
-    TextView resultado;
-    EditText numero1, numero2;
-    Button buttonMulti, buttonDivi, buttonResta, buttomSuma;
+
+
+    @BindView(R.id.resultado) TextView resultado;
+    @BindView(R.id.numero1) TextView numero1;
+    @BindView(R.id.numero2) TextView numero2;
+    @BindView(R.id.buttonMulti) Button bn_Multi;
+    @BindView(R.id.buttonDivi) Button bn_Divi;
+    @BindView(R.id.buttonResta) Button bn_Resta;
+    @BindView(R.id.buttomSuma) Button bn_Suma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +33,11 @@ public class MainActivity extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
 
-        resultado =(TextView) findViewById(R.id.resultado);
-        numero1 = (EditText) findViewById(R.id.numero1);
-        numero2 = (EditText) findViewById(R.id.numero2);
 
-        buttonMulti = (Button) findViewById(R.id.buttonMulti);
-        buttonDivi = (Button) findViewById(R.id.buttonDivi);
-        buttonResta = (Button) findViewById(R.id.buttonResta);
-        buttomSuma = (Button) findViewById(R.id.buttomSuma);
-
-
+        /*
         buttonMulti.setOnClickListener(new View.OnClickListener() {
 
             int numeroUno = 0;
@@ -81,12 +84,21 @@ public class MainActivity extends Activity {
 
             }
         });
-
+*/
 
 
 
 
     }// end onCreate
+
+
+    @OnClick(R.id.buttonMulti)
+    public void hacer(){
+        resultado.setText("test");
+        Toast toast1 =
+                Toast.makeText(getApplicationContext(),
+                        " test  ", Toast.LENGTH_SHORT);
+    }
 
 
     public int multiplicacion(int datoA,int datoB){
