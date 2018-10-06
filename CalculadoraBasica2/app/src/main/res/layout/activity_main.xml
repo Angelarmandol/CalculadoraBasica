@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignWithParentIfMissing="false"
+    android:layout_centerHorizontal="false"
+    android:layout_marginEnd="0dp"
+    android:layout_marginStart="0dp"
+    android:baselineAligned="false"
+    android:gravity="center_vertical"
+    android:isScrollContainer="false"
+    android:paddingBottom="0dp"
+    android:soundEffectsEnabled="false"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/numero1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:text="@string/numero1"
+                tools:text="Dato 1" />
+
+            <EditText
+                android:id="@+id/numero2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                tools:text="Dato 2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonMulti"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/multiplicacion" />
+
+                    <Button
+                        android:id="@+id/buttonDivi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/division" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/buttonResta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resta" />
+
+                    <Button
+                        android:id="@+id/buttomSuma"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/suma" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="0"
+            android:inputType="textPersonName"
+            android:text="@string/resultado" />
+    </LinearLayout>
+
+</LinearLayout>
