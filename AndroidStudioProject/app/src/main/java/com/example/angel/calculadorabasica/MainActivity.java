@@ -87,7 +87,7 @@ public class MainActivity extends Activity {
 */
 
 
-
+// falta parsearcuando es cero
 
     }// end onCreate
 
