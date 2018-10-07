@@ -152,8 +152,19 @@ public class MainActivity extends Activity {
 
 
     public void getNumbers() {
-        String a = numero1.getText().toString();
-        String b = numero2.getText().toString();
+        String a="0",b="0";
+        try {
+          a   = numero1.getText().toString();
+        }catch (Exception e){
+
+        }
+        try {
+         b = numero2.getText().toString();;
+        }catch (Exception e){
+
+        }
+
+
 
         try {
             enteroNumero1 = (int) Integer.parseInt(a);
@@ -166,7 +177,7 @@ public class MainActivity extends Activity {
         } catch (Exception e) {
             resultado.setText("no paso el parseo new " + b);
         }
-
+/*
         Toast toast1 =
                 Toast.makeText(getApplicationContext(),
                         "el valor de c es: " + enteroNumero1, Toast.LENGTH_SHORT);
@@ -176,6 +187,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(getApplicationContext(),
                         "el valor de d es: " + enteroNumero2, Toast.LENGTH_SHORT);
         toast2.show();
+        */
 
     }
 
