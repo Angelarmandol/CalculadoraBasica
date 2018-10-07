@@ -16,12 +16,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class ExampleIntrumentedTest{
+public class ExampleInstrumentedTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivity = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void testSuma(){
+    public void testMulti(){
 
         onView(withId(R.id.numero1))
                 .perform(ViewActions.click())
@@ -35,11 +35,82 @@ public class ExampleIntrumentedTest{
                 .check(ViewAssertions.matches(withText("3")))
                 .perform(ViewActions.closeSoftKeyboard());
 
-        onView(withId(R.id.buttonMulti))
-                .perform(ViewActions.click();
+        onView(withId(R.id.btn_Multi))
+                .perform(ViewActions.click());
 
         onView(withId(R.id.resultado))
                 .check(ViewAssertions.matches(withText("15")));
+
+
+    }
+
+    @Test
+    public void testDivi(){
+
+        onView(withId(R.id.numero1))
+                .perform(ViewActions.click())
+                .perform(ViewActions.typeText("7"))
+                .check(ViewAssertions.matches(withText("7")))
+                .perform(ViewActions.closeSoftKeyboard());
+
+        onView(withId(R.id.numero2))
+                .perform(ViewActions.click())
+                .perform(ViewActions.typeText("2"))
+                .check(ViewAssertions.matches(withText("2")))
+                .perform(ViewActions.closeSoftKeyboard());
+
+        onView(withId(R.id.btn_Divi))
+                .perform(ViewActions.click());
+
+        onView(withId(R.id.resultado))
+                .check(ViewAssertions.matches(withText("3.5")));
+
+
+    }
+
+    @Test
+    public void testResta(){
+
+        onView(withId(R.id.numero1))
+                .perform(ViewActions.click())
+                .perform(ViewActions.typeText("7"))
+                .check(ViewAssertions.matches(withText("7")))
+                .perform(ViewActions.closeSoftKeyboard());
+
+        onView(withId(R.id.numero2))
+                .perform(ViewActions.click())
+                .perform(ViewActions.typeText("2"))
+                .check(ViewAssertions.matches(withText("2")))
+                .perform(ViewActions.closeSoftKeyboard());
+
+        onView(withId(R.id.btn_Resta))
+                .perform(ViewActions.click());
+
+        onView(withId(R.id.resultado))
+                .check(ViewAssertions.matches(withText("5")));
+
+
+    }
+    @Test
+    public void testSuma(){
+
+        onView(withId(R.id.numero1))
+                .perform(ViewActions.click())
+                .perform(ViewActions.typeText("4"))
+                .check(ViewAssertions.matches(withText("4")))
+                .perform(ViewActions.closeSoftKeyboard());
+
+        onView(withId(R.id.numero2))
+                .perform(ViewActions.click())
+                .perform(ViewActions.typeText("2"))
+                .check(ViewAssertions.matches(withText("2")))
+                .perform(ViewActions.closeSoftKeyboard());
+
+        onView(withId(R.id.btn_Suma))
+                .perform(ViewActions.click());
+
+        onView(withId(R.id.resultado))
+                .check(ViewAssertions.matches(withText("6")));
 
 
     }

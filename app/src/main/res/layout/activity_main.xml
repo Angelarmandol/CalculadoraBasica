@@ -33,10 +33,9 @@
 
             <EditText
                 android:id="@+id/numero1"
-                android:layout_width="73dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="numberSigned"
-                android:text="Dato2"
                 tools:text="Dato 1" />
 
             <EditText
@@ -65,13 +64,13 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/buttonMulti"
+                        android:id="@+id/btn_Multi"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Multiplicación" />
 
                     <Button
-                        android:id="@+id/buttonDivi"
+                        android:id="@+id/btn_Divi"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Division" />
@@ -83,13 +82,13 @@
                     android:orientation="vertical">
 
                     <Button
-                        android:id="@+id/buttonResta"
+                        android:id="@+id/btn_Resta"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Resta" />
 
                     <Button
-                        android:id="@+id/buttomSuma"
+                        android:id="@+id/btn_Suma"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="Suma" />
@@ -107,12 +106,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
+        <TextView
             android:id="@+id/resultado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="0"
-            android:inputType="textPersonName"
             android:text="Resultado" />
     </LinearLayout>
 
